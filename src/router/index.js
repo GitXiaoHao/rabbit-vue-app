@@ -1,5 +1,5 @@
 //
-// @/rabbit/router/index.js
+// @/rabbit/router/category.js
 // 路由设计
 // createRouter 创建router实例对象
 // createWebHashHistory 创建history模式的路由
