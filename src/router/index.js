@@ -7,7 +7,6 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 
 
-
 const rabbitConstantRoutes = [
     {
         path: "/",
@@ -18,7 +17,7 @@ const rabbitConstantRoutes = [
                 component: () => import('@/views/home/Index.vue')
             },
             {
-                path: 'category',
+                path: 'category/:id',
                 component: () => import('@/views/category/Index.vue')
             }
         ]
@@ -39,8 +38,12 @@ const rabbitConstantRoutes = [
         hidden: true
     }
 ]
+
 const router = new createRouter({
     routes: rabbitConstantRoutes,
     history: createWebHashHistory(import.meta.env.BASE_URL),
+    scrollBehavior() {
+        return {top: 0}
+    }
 })
 export default router

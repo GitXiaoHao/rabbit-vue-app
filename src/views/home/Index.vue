@@ -5,6 +5,7 @@
   </div>
   <HomeNew/>
   <HomeHot/>
+  <ImageView/>
   <HomeProduct/>
 </template>
 
@@ -15,6 +16,7 @@ import HomeBanner from "@/views/home/components/HomeBanner.vue";
 import HomeNew from "@/views/home/components/HomeNew.vue";
 import HomeHot from "@/views/home/components/HomeHot.vue";
 import HomeProduct from "@/views/home/components/HomeProduct.vue";
+import ImageView from "@/components/ImageView.vue";
 </script>
 
 <style scoped lang="scss">
