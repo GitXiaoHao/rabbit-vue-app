@@ -2,6 +2,7 @@
 // import LayoutHeaderUl from './LayoutHeaderUl.vue'
 // // vueUse
 import {useScroll} from '@vueuse/core'
+import LayoutHeaderUl from "@/views/layout/components/LayoutHeaderUl.vue";
 
 const {y} = useScroll(window)
 
@@ -11,14 +12,15 @@ const {y} = useScroll(window)
 <template>
   <div class="app-header-sticky" :class="{show: y > 78}">
     <div class="container">
+
       <RouterLink class="logo" to="/"/>
       <!-- 导航区域 -->
-
-      <!--      <LayoutHeaderUl />-->
+      <LayoutHeaderUl/>
       <div class="right">
         <RouterLink to="/">品牌</RouterLink>
         <RouterLink to="/">专题</RouterLink>
       </div>
+
     </div>
   </div>
 </template>

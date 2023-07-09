@@ -1,5 +1,5 @@
 <script setup>
-// import { useCartStore } from '@/stores/cartStore'
+// import { useCartStore } from '@/store/cartStore'
 // const cartStore = useCartStore()
 
 </script>

@@ -4,12 +4,7 @@
       <h1 class="logo">
         <RouterLink to="/rabbit">小兔鲜</RouterLink>
       </h1>
-      <ul class="app-header-nav">
-        <li class="home" v-for="item in categoryList" :key="item.id">
-          <router-link to="/">{{ item.name }}</router-link>
-        </li>
-      </ul>
-<!--      <LayoutHeaderUl/>-->
+      <LayoutHeaderUl/>
       <div class="search">
         <i class="iconfont icon-search"></i>
         <input type="text" placeholder="搜一搜">
@@ -26,20 +21,8 @@ import LayoutHeaderUl from "@/views/layout/components/LayoutHeaderUl.vue";
 import HeaderCart from "@/views/layout/components/HeaderCart.vue";
 import {getCategoryApi} from "@/apis/layout.js";
 import {onMounted, ref} from "vue";
+import {useCategoryStore} from "@/store/category.js";
 
-
-const categoryList = ref([])
-const getCategory = async () => {
-  const res = await getCategoryApi();
-  const result = res.data
-  if (result.code === 200) {
-    // appearMessage('')
-    categoryList.value = result.data
-  }
-}
-onMounted(() => {
-  getCategory()
-})
 </script>
 <style scoped lang='scss'>
 .app-header {
